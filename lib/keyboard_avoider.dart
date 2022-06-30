@@ -136,6 +136,10 @@ class _KeyboardAvoiderState extends State<KeyboardAvoider> with WidgetsBindingOb
   }
 
   void _resize() {
+    if (!mounted) {
+      return;
+    }
+    
     if (context == null) {
       return;
     }
